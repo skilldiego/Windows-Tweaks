@@ -4,7 +4,13 @@ A collection of PowerShell scripts designed to optimize Windows performance, red
 
 ## Scripts
 
-### 1. Disable-Startup-Delay.ps1
+### Disable-Online-Start-Menu-Search.ps1
+**Purpose:** Prevents the Start Menu from sending keystrokes to Bing and displaying online search suggestions/ads.
+- **Action:** Sets `DisableSearchBoxSuggestions` to `1`.
+- **Target:** `HKCU:\Software\Policies\Microsoft\Windows\Explorer`
+- **Downsides:** Removes web results, weather, and calculations from the Start Menu.
+
+### Disable-Startup-Delay.ps1
 **Purpose:** Speeds up the login process by removing the artificial delay Windows places on startup applications.
 - **Action:**
   - Sets `StartupDelayInMSec` to `0`.
@@ -12,13 +18,7 @@ A collection of PowerShell scripts designed to optimize Windows performance, red
 - **Target:** `HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Serialize`
 - **Downsides:** May cause temporary system lag at login. Some apps might fail to launch correctly.
 
-### 2. Disable-Online-Start-Menu-Search.ps1
-**Purpose:** Prevents the Start Menu from sending keystrokes to Bing and displaying online search suggestions/ads.
-- **Action:** Sets `DisableSearchBoxSuggestions` to `1`.
-- **Target:** `HKCU:\Software\Policies\Microsoft\Windows\Explorer`
-- **Downsides:** Removes web results, weather, and calculations from the Start Menu.
-
-### 3. Reduce-Latency.ps1
+### Reduce-Latency.ps1
 **Purpose:** Applies network and system profile optimizations to lower latency (ping) and improve responsiveness, primarily for gaming.
 - **Features:** Auto-elevates to Administrator.
 - **Network Actions:**
