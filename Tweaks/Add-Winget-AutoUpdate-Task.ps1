@@ -36,7 +36,7 @@ Write-Host "Press any key to apply this tweak (or Ctrl+C to cancel)..." -Foregro
 $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 
 # Logic
-$action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -WindowStyle Hidden -Command `"$wingetCommand`""
+$action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -Command `"$wingetCommand`""
 $trigger = New-ScheduledTaskTrigger -AtLogon -User $env:USERNAME
 $settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -RunOnlyIfNetworkAvailable
 
