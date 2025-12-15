@@ -15,7 +15,7 @@ if (-not $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Adm
 
 $taskName = "WingetAutoUpdateUser"
 # Command to run winget upgrade twice with a delay
-$wingetCommand = "winget upgrade --all --include-unknown --accept-source-agreements --accept-package-agreements; Start-Sleep -Seconds 15; winget upgrade --all --include-unknown --accept-source-agreements --accept-package-agreements"
+$wingetCommand = "winget upgrade --all --accept-source-agreements --accept-package-agreements; Start-Sleep -Seconds 15; winget upgrade --all --accept-source-agreements --accept-package-agreements"
 
 # Explanation
 Write-Host "----------------------------------------------------------------" -ForegroundColor Cyan
