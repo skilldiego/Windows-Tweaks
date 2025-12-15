@@ -4,6 +4,15 @@ A collection of PowerShell scripts designed to optimize Windows performance, red
 
 ## Scripts
 
+### Add-Winget-AutoUpdate-Task.ps1
+**Purpose:** Creates a Scheduled Task that automatically runs `winget upgrade --all` when the user logs in to keep software up to date.
+- **Features:** Auto-elevates to Administrator.
+- **Action:**
+  - Registers a task named `WingetAutoUpdateUser`.
+  - Runs with highest privileges.
+  - Executes the upgrade command twice to handle dependencies.
+- **Downsides:** May consume network bandwidth and CPU resources immediately after login.
+
 ### Disable-Online-Start-Menu-Search.ps1
 **Purpose:** Prevents the Start Menu from sending keystrokes to Bing and displaying online search suggestions/ads.
 - **Action:** Sets `DisableSearchBoxSuggestions` to `1`.
