@@ -27,6 +27,15 @@ A collection of PowerShell scripts designed to optimize Windows performance, red
 - **Target:** `HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Serialize`
 - **Downsides:** May cause temporary system lag at login. Some apps might fail to launch correctly.
 
+### Disable-Telemetry.ps1
+**Purpose:** Reduces Windows data collection and tracking.
+- **Features:** Auto-elevates to Administrator.
+- **Actions:**
+  - Sets `AllowTelemetry` to `0` in Group Policy registry.
+  - Disables Advertising ID.
+  - Disables `DiagTrack` and `dmwappushservice` services.
+- **Downsides:** May break some Windows Store features, Windows Insider builds, or Intune in enterprise environments.
+
 ### Reduce-Latency.ps1
 **Purpose:** Applies network and system profile optimizations to lower latency (ping) and improve responsiveness, primarily for gaming.
 - **Features:** Auto-elevates to Administrator.
