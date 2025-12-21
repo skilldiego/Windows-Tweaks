@@ -10,7 +10,6 @@ A collection of PowerShell scripts designed to optimize Windows performance, red
 | **Disable-Online-Start-Menu-Search.ps1** | Disables Bing/Online results in Start Menu. | Sets `DisableSearchBoxSuggestions` = 1 in HKCU Policies. | Removes web results/weather from Start. |
 | **Disable-Startup-Delay.ps1** | Removes artificial startup delay. | Sets `StartupDelayInMSec` & `WaitForIdleState` to 0. | May cause temporary lag at login. |
 | **Disable-Telemetry.ps1** | Reduces Windows tracking/telemetry. | Sets `AllowTelemetry`=0; Disables Advertising ID; Disables `DiagTrack`. | Auto-elevates. May break Intune/Insider builds. |
-| **Enable-Classic-Context-Menu.ps1** | Restores Windows 10 style context menu. | Creates CLSID `{86ca1aa0...}` key in HKCU. | Requires Explorer restart or sign out. |
 | **Enable-Long-Paths.ps1** | Enables support for paths > 260 chars. | Sets `LongPathsEnabled` = 1 in HKLM System. | Auto-elevates. Useful for deep directory structures. |
 | **Enable-Seconds-On-Taskbar-Clock.ps1** | Shows seconds in the system tray clock. | Sets `ShowSecondsInSystemClock` = 1 in HKCU Advanced. | Requires Explorer restart or sign out. |
 | **Reduce-Latency.ps1** | Optimizes network/system for gaming latency. | Disables Nagle's Algo, Delayed ACK, Network Throttling. | Auto-elevates. May increase battery usage. |
