@@ -12,7 +12,6 @@ A collection of PowerShell scripts designed to optimize Windows performance, red
 | **Disable-Telemetry.ps1** | Reduces Windows tracking/telemetry. | Sets `AllowTelemetry`=0; Disables Advertising ID; Disables `DiagTrack`. | Auto-elevates. May break Intune/Insider builds. |
 | **Enable-Long-Paths.ps1** | Enables support for paths > 260 chars. | Sets `LongPathsEnabled` = 1 in HKLM System. | Auto-elevates. Useful for deep directory structures. |
 | **Enable-Seconds-On-Taskbar-Clock.ps1** | Shows seconds in the system tray clock. | Sets `ShowSecondsInSystemClock` = 1 in HKCU Advanced. | Requires Explorer restart or sign out. |
-| **Enable-Windows11-NVME-Stack.ps1** | Enables experimental NVMe stack. | Sets Feature ID `416550087` to 1. | Auto-elevates. Undocumented/Experimental. |
 | **Reduce-Latency.ps1** | Optimizes network/system for gaming latency. | Disables Nagle's Algo, Delayed ACK, Network Throttling. | Auto-elevates. May increase battery usage. |
 
 ## How to Run
